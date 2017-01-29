@@ -1,4 +1,4 @@
-# Cocoa
+# Mango (a heavily modified version of Cocoa)
 
 A consistent and responsive [Hugo](http://gohugo.io) [theme](https://github.com/spf13/hugoThemes/) with clean typography. The primary typefaces are Open Sans, Raleway, and Ubuntu Mono.
 
@@ -38,7 +38,7 @@ Most features are optional and can be individually enabled/disabled in your [`co
 * [Changelog](#changelog)
 * [License](#license)
 
-## Quick start 
+## Quick start
 
 From the root of your Hugo site, clone the theme into `themes/cocoa` by running:
 
@@ -78,7 +78,7 @@ hugo new fixed/about.md
 
 ## Development
 
-This theme is built and improved upon by open source [contributions](https://github.com/nishanths/cocoa-hugo-theme/graphs/contributors). Pull requests, bug fixes, and new features are welcome! 
+This theme is built and improved upon by open source [contributions](https://github.com/nishanths/cocoa-hugo-theme/graphs/contributors). Pull requests, bug fixes, and new features are welcome!
 
 If you're contributing CSS changes, please see the README at [`dev/`](dev).
 
@@ -90,4 +90,4 @@ See [Changelog](https://github.com/nishanths/cocoa-hugo-theme/wiki/Changelog) in
 
 ## License
 
-Licensed under the MIT License. See the [LICENSE](https://github.com/nishanths/cocoa-hugo-theme/blob/master/LICENSE) file for more details.
+Licensed under the MIT License. See the [LICENSE](https://github.com/sdwalsh/mango/blob/master/LICENSE) file for more details.
