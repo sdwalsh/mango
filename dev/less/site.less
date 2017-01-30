@@ -5,6 +5,7 @@
     -webkit-animation: blink 1.25s 5;
     -moz-animation: blink 1.25s 5;
     animation: blink 1.25s 5;
+    color: @blue;
 }
 
 @keyframes blink{
@@ -207,7 +208,10 @@ section.header {
         }
 
         .name {
-            color: @blue;
+            color: @violet;
+            #mirango {
+              color: @blue;
+            }
         }
 
         nav {
@@ -325,9 +329,9 @@ section.main {
         }
 
         .page-heading {
-            .heading();
+            .heading(38px);
             .tt-upper();
-            margin-bottom: floor(@vspacing/2);
+            margin-bottom: floor(@vspacing/4);
         }
 
         .front-matter {
@@ -429,10 +433,28 @@ section.main {
     .container {
         .content {
             .post-item {
-                .flex-display();
-                .align-items(center);
+                margin-bottom: 1em;
                 display: list-item;
                 list-style: disc inside;
+                .flex-display();
+                .flex-direction(row); // vertically stack sections
+                .align-items(space-between); // horizontally center all sections
+                .justify-content(space-between); // start sections at the top
+                font-size: 20px;
+
+                .title {
+                    color: @violet;
+                }
+
+                .date {
+                    font-size: 16px;
+                    color: @yellow;
+                }
+
+                .description {
+                    font-size: 16px;
+                    color: @base01;
+                }
 
                 .meta {
                     .meta();
@@ -476,8 +498,8 @@ section.main {
     }
 
     section.header {
-        padding-top: @vspacing;
-        padding-bottom: @vspacing;
+        padding-top: @vspacing/3;
+        padding-bottom: @vspacing/2;
     }
 
     section.icons {

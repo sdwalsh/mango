@@ -2,10 +2,10 @@
 <section class="main">
     <div class="container">
         <div class="content">
-            <div class="page-heading">Blog</div>
+            <div class="page-heading"></div>
             <ul>
             {{ range .Data.Pages.ByPublishDate }}
-                {{ if eq .Section "blog" }}
+                {{ if eq .Section "post" }}
                     {{ partial "li.html" . }}
                 {{ end }}
             {{ end }}
@@ -14,4 +14,3 @@
     </div>
 </section>
 {{ partial "footer.html" . }}
-
