@@ -1,6 +1,10 @@
 <!-- Google Analytics -->
 {{ template "_internal/google_analytics_async.html" . }}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/main.js"></script>
+
 {{ if .Site.Params.highlightjs }}
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
   {{ range .Site.Params.highlightjslanguages }}

@@ -1,5 +1,28 @@
 // General styles
 
+.typed-cursor{
+    opacity: 0;
+    -webkit-animation: blink 1.25s 5;
+    -moz-animation: blink 1.25s 5;
+    animation: blink 1.25s 5;
+}
+
+@keyframes blink{
+    0% { opacity:0; }
+    50% { opacity:1; }
+    100% { opacity:0; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:0; }
+    50% { opacity:1; }
+    100% { opacity:0; }
+}
+@-moz-keyframes blink{
+    0% { opacity:0; }
+    50% { opacity:1; }
+    100% { opacity:0; }
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -11,6 +34,7 @@ a, a:visited, a:focus, a:active {
 html {
     height: 100%;
     font-size: @base-font-size;
+    background-color: @base3;
 }
 
 body {
@@ -22,14 +46,13 @@ body {
     min-height: 100%;
     font-weight: 400;
     font-family: @body-font-stack;
-    color: @black-content;
+    color: @base01;
     line-height: 1.6;
     text-rendering: optimizeLegibility !important;
 }
 
 @media (min-width: @wide-1-breakpoint) {
     body {
-        .justify-content(center); // vertically center all sections
     }
 
     .non-narrow {
@@ -60,7 +83,7 @@ section {
 
 // Introduced for https://github.com/nishanths/cocoa-hugo-theme/issues/7.
 .container .content {
-  width: 100%;
+    width: 100%;
 }
 
 @media (min-width: @wide-1-breakpoint) {
@@ -68,7 +91,7 @@ section {
         padding: 0 @vspacing/2;
         margin-left: 100px;
         margin-right: 100px;
-        max-width: 750px;
+        max-width: 1080px;
     }
 }
 
@@ -100,7 +123,7 @@ section.main {
 // Header section
 
 section.header {
-    background-color: @background;
+    background-color: @base3;
 
     .container {
         .align-items(center);
@@ -121,8 +144,9 @@ section.header {
 
     .name {
         .heading();
-        .tt-upper();
         color: @compensated-black;
+        font-family: 'Ubuntu Mono', monospace;
+        font-size: 3em;
     }
 
     h3.self-intro {
@@ -135,8 +159,9 @@ section.header {
     nav {
         font-size: 14px;
         margin-bottom: floor(@vspacing/2);
-        text-transform: uppercase;
-        font-family: @heading-font-stack;
+        font-family: @monospace-font-stack;
+        text-transform: lowercase;
+        .flex-display(start);
 
         ul {
             list-style: none;
@@ -171,7 +196,7 @@ section.header {
 
 @media (min-width: @wide-1-breakpoint) {
     section.header {
-        background-color: transparent;
+        background-color: @base3;
 
         .container {
             .justify-content(flex-start);
@@ -182,23 +207,28 @@ section.header {
         }
 
         .name {
-            color: @black;
+            color: @blue;
         }
 
         nav {
-            font-size: 14px;
+            .align-items(flex-start);
+            .justify-content(flex-start);
+            font-size: 1.2em;
             margin-bottom: 0;
 
             ul {
-                text-align: left;
             }
 
             ul li {
-                color: @gray;
+                color: @yellow;
+                margin-right: 30px;
 
                 &:hover {
-                    color: @black;
+                    color: @blue;
                 }
+            }
+            ul li::before {
+              content: ">  ";
             }
         }
     }
@@ -207,7 +237,7 @@ section.header {
 // Icons
 
 section.icons {
-    background-color: @background;
+    background-color: @base3;
 
     .container {
         .align-items(center);

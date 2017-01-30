@@ -20,6 +20,45 @@
     display: initial;
   }
 }
+.typed-cursor {
+  opacity: 0;
+  -webkit-animation: blink 1.25s 5;
+  -moz-animation: blink 1.25s 5;
+  animation: blink 1.25s 5;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 *,
 *:before,
 *:after {
@@ -34,6 +73,7 @@ a:active {
 html {
   height: 100%;
   font-size: 16px;
+  background-color: #fdf6e3;
 }
 body {
   display: -webkit-flex;
@@ -57,17 +97,11 @@ body {
   min-height: 100%;
   font-weight: 400;
   font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
-  color: #111;
+  color: #586e75;
   line-height: 1.6;
   text-rendering: optimizeLegibility !important;
 }
 @media (min-width: 600px) {
-  body {
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
-  }
   .non-narrow.zero-top-spacing {
     padding-top: 0 !important;
   }
@@ -104,7 +138,7 @@ section {
     padding: 0 16px;
     margin-left: 100px;
     margin-right: 100px;
-    max-width: 750px;
+    max-width: 1080px;
   }
 }
 section.header {
@@ -146,7 +180,7 @@ section.main {
   }
 }
 section.header {
-  background-color: #f7f7f7;
+  background-color: #fdf6e3;
 }
 section.header .container {
   -webkit-align-items: center;
@@ -186,9 +220,10 @@ section.header .name {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333;
-  text-transform: uppercase;
+  color: #657b83;
   color: #555;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 3em;
 }
 section.header h3.self-intro {
   font-size: 1em;
@@ -198,7 +233,7 @@ section.header h3.self-intro {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333;
+  color: #657b83;
   font-weight: 400;
   color: #555;
   margin-bottom: 1rem;
@@ -206,8 +241,13 @@ section.header h3.self-intro {
 section.header nav {
   font-size: 14px;
   margin-bottom: 16px;
-  text-transform: uppercase;
-  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: 'Ubuntu Mono', 'Menlo', monospace;
+  text-transform: lowercase;
+  display: -webkit-start;
+  display: -moz-start;
+  display: -ms-startbox;
+  display: -ms-start;
+  display: start;
 }
 section.header nav ul {
   list-style: none;
@@ -241,7 +281,7 @@ section.header nav ul li:hover {
 }
 @media (min-width: 600px) {
   section.header {
-    background-color: transparent;
+    background-color: #fdf6e3;
   }
   section.header .container {
     -webkit-justify-content: flex-start;
@@ -256,24 +296,33 @@ section.header nav ul li:hover {
     align-items: flex-start;
   }
   section.header .name {
-    color: #333;
+    color: #268bd2;
   }
   section.header nav {
-    font-size: 14px;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    font-size: 1.2em;
     margin-bottom: 0;
   }
-  section.header nav ul {
-    text-align: left;
-  }
   section.header nav ul li {
-    color: #666;
+    color: #b58900;
+    margin-right: 30px;
   }
   section.header nav ul li:hover {
-    color: #333;
+    color: #268bd2;
+  }
+  section.header nav ul li::before {
+    content: ">  ";
   }
 }
 section.icons {
-  background-color: #f7f7f7;
+  background-color: #fdf6e3;
 }
 section.icons .container {
   -webkit-align-items: center;
@@ -359,7 +408,7 @@ section.main .content .title-container .initials {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333;
+  color: #657b83;
   text-transform: uppercase;
   color: #666;
 }
@@ -381,7 +430,7 @@ section.main .content .page-heading {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333;
+  color: #657b83;
   text-transform: uppercase;
   margin-bottom: 16px;
 }
@@ -575,7 +624,7 @@ section.main .content .markdown h6 {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-  color: #333;
+  color: #657b83;
   text-transform: none;
   margin-top: 1.75rem;
 }
