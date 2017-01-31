@@ -215,7 +215,7 @@ section.header .avatar {
   max-width: 50px;
 }
 section.header .name {
-  font-size: 28px;
+  font-size: 58px;
   text-transform: lowercase !important;
   letter-spacing: -0.005rem;
   font-weight: 700;
@@ -407,7 +407,7 @@ section.main .content .title-container {
 }
 section.main .content .title-container .initials {
   display: none;
-  font-size: 28px;
+  font-size: 58px;
   font-family: 'Inconsolata', monospace;;
   text-transform: lowercase !important;
   letter-spacing: -0.005rem;
@@ -430,7 +430,7 @@ section.main .content .title-container .initials a:hover {
   color: #333;
 }
 section.main .content .page-heading {
-  font-size: 38px;
+  font-size: 28px;
   font-family: 'Inconsolata', monospace;;
   text-transform: lowercase !important;
   letter-spacing: -0.005rem;
@@ -439,8 +439,8 @@ section.main .content .page-heading {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   color: #657b83;
-  text-transform: uppercase;
   margin-bottom: 8px;
+  font-family: 'Cantarell', sans-serif !important;
 }
 section.main .content .front-matter .page-heading {
   margin-bottom: 0;
@@ -646,7 +646,7 @@ section.main .content .markdown h3,
 section.main .content .markdown h4,
 section.main .content .markdown h5,
 section.main .content .markdown h6 {
-  font-size: 28px;
+  font-size: 58px;
   font-family: 'Inconsolata', monospace;;
   text-transform: lowercase !important;
   letter-spacing: -0.005rem;
@@ -654,6 +654,7 @@ section.main .content .markdown h6 {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  font-family: 'Cantarell', sans-serif;
   color: #657b83;
   text-transform: none;
   margin-top: 1.75rem;
@@ -664,24 +665,21 @@ section.main .content .markdown h1 {
 }
 section.main .content .markdown h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: .2rem;
 }
 section.main .content .markdown h3 {
   font-size: 1em;
-  margin-bottom: 1rem;
 }
 section.main .content .markdown h4,
 section.main .content .markdown h5,
 section.main .content .markdown h6 {
   font-size: 1rem;
-  margin-bottom: 1rem;
   letter-spacing: none;
 }
 section.main .content .markdown code,
 section.main .content .markdown pre {
   font-family: 'Inconsolata', monospace;;
   font-size: 1rem;
-  background-color: #f7f7f7;
 }
 section.main .content .markdown code {
   /* enclosed by single backtick (`) */
@@ -691,18 +689,18 @@ section.main .content .markdown code {
 section.main .content .markdown pre {
   /* Hugo specific: consider using the 'highlight' shortcode */
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
+  margin-bottom: .5rem;
+  padding: 1rem, 2rem, 1rem, 2rem;
   line-height: 1.5em;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
+  border: 1px solid #657b83;
 }
 section.main .content .markdown pre code {
   /* enclosed by 3 backticks (```) */
-  padding: 0;
+  padding: 1em;
   font-size: 1rem;
 }
 section.main .content .markdown a code {
@@ -716,6 +714,7 @@ section.main .content .markdown p {
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 1em;
+  color: #657b83;
 }
 section.main .content .markdown ul,
 section.main .content .markdown ol,
@@ -763,7 +762,7 @@ section.main .content .markdown blockquote {
   padding: .5rem 1rem;
   margin: .8rem 0;
   color: #7a7a7a;
-  border-left: .25rem solid #e5e5e5;
+  border-left: 0.25rem solid #6c71c4;
 }
 section.main .content .markdown blockquote p:last-child {
   margin-bottom: 0;
