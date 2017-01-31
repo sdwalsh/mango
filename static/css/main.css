@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Cantarell|Inconsolata');
 .dark {
   color: #333 !important;
 }
@@ -97,7 +98,7 @@ body {
   width: 100%;
   min-height: 100%;
   font-weight: 400;
-  font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+  font-family: 'Cantarell', sans-serif;
   color: #586e75;
   line-height: 1.6;
   text-rendering: optimizeLegibility !important;
@@ -215,7 +216,6 @@ section.header .avatar {
 }
 section.header .name {
   font-size: 28px;
-  font-family: 'Ubuntu Mono', 'Menlo', monospace;
   text-transform: lowercase !important;
   letter-spacing: -0.005rem;
   font-weight: 700;
@@ -224,12 +224,12 @@ section.header .name {
   font-smoothing: antialiased;
   color: #657b83;
   color: #555;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: 'Inconsolata', monospace;;
   font-size: 3em;
 }
 section.header h3.self-intro {
   font-size: 1em;
-  font-family: 'Ubuntu Mono', 'Menlo', monospace;
+  font-family: 'Inconsolata', monospace;;
   text-transform: lowercase !important;
   letter-spacing: -0.005rem;
   font-weight: 700;
@@ -244,7 +244,7 @@ section.header h3.self-intro {
 section.header nav {
   font-size: 14px;
   margin-bottom: 16px;
-  font-family: 'Ubuntu Mono', 'Menlo', monospace;
+  font-family: 'Inconsolata', monospace;;
   text-transform: lowercase;
   display: -webkit-start;
   display: -moz-start;
@@ -408,7 +408,7 @@ section.main .content .title-container {
 section.main .content .title-container .initials {
   display: none;
   font-size: 28px;
-  font-family: 'Ubuntu Mono', 'Menlo', monospace;
+  font-family: 'Inconsolata', monospace;;
   text-transform: lowercase !important;
   letter-spacing: -0.005rem;
   font-weight: 700;
@@ -431,7 +431,7 @@ section.main .content .title-container .initials a:hover {
 }
 section.main .content .page-heading {
   font-size: 38px;
-  font-family: 'Ubuntu Mono', 'Menlo', monospace;
+  font-family: 'Inconsolata', monospace;;
   text-transform: lowercase !important;
   letter-spacing: -0.005rem;
   font-weight: 700;
@@ -593,7 +593,7 @@ section.main {
   }
   section.header {
     padding-top: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
   section.icons {
     padding-top: 60px;
@@ -647,7 +647,7 @@ section.main .content .markdown h4,
 section.main .content .markdown h5,
 section.main .content .markdown h6 {
   font-size: 28px;
-  font-family: 'Ubuntu Mono', 'Menlo', monospace;
+  font-family: 'Inconsolata', monospace;;
   text-transform: lowercase !important;
   letter-spacing: -0.005rem;
   font-weight: 700;
@@ -679,7 +679,7 @@ section.main .content .markdown h6 {
 }
 section.main .content .markdown code,
 section.main .content .markdown pre {
-  font-family: 'Ubuntu Mono', 'Menlo', monospace;
+  font-family: 'Inconsolata', monospace;;
   font-size: 1rem;
   background-color: #f7f7f7;
 }
