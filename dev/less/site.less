@@ -102,10 +102,10 @@ section.header {
     .flex-order(0);
 }
 section.icons {
-    .flex-order(1);
+    .flex-order(2);
 }
 section.main {
-    .flex-order(2);
+    .flex-order(1);
 }
 
 @media (min-width: @wide-1-breakpoint) {
@@ -144,9 +144,10 @@ section.header {
     }
 
     .name {
-        .heading();
-        color: @compensated-black;
-        font-family: @monospace-font-stack;
+        color: @violet;
+        #mirango {
+          color: @blue;
+        }
         font-size: 3em;
     }
 
@@ -183,13 +184,17 @@ section.header {
             }
         }
 
+        ul li::before {
+          content: ">  ";
+        }
+
         ul li {
-            color: @compensated-black;
+            color: @yellow;
             font-weight: 500;
             .transition(~'color @{transition-speed-1} @{in-sine}');
 
             &:hover {
-                color: @compensated-black-hover;
+                color: @blue;
             }
         }
     }
@@ -442,20 +447,26 @@ section.main {
                 .justify-content(space-between); // start sections at the top
                 font-size: 20px;
 
+                a {
+                  .transition(~'color @{transition-speed-1} @{in-sine}');
+
+                  &:hover {
+                      color: @blue;
+                  }
+                }
+
                 .title {
                     color: @violet;
                 }
-
                 .date {
+                    display: none;
                     font-size: 16px;
                     color: @yellow;
                 }
-
                 .description {
                     font-size: 16px;
                     color: @base01;
                 }
-
                 .meta {
                     .meta();
                     display: none;
@@ -516,6 +527,12 @@ section.main {
                 .post-item {
                     display: flex;
                     list-style: none;
+
+                    .date {
+                        display: flex;
+                        font-size: 16px;
+                        color: @yellow;
+                    }
 
                     .meta {
                         display: block;

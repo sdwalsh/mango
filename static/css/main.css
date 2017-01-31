@@ -150,16 +150,16 @@ section.header {
   order: 0;
 }
 section.icons {
-  -webkit-order: 1;
-  -moz-order: 1;
-  -ms-order: 1;
-  order: 1;
-}
-section.main {
   -webkit-order: 2;
   -moz-order: 2;
   -ms-order: 2;
   order: 2;
+}
+section.main {
+  -webkit-order: 1;
+  -moz-order: 1;
+  -ms-order: 1;
+  order: 1;
 }
 @media (min-width: 600px) {
   section.header {
@@ -215,17 +215,11 @@ section.header .avatar {
   max-width: 50px;
 }
 section.header .name {
-  font-size: 58px;
-  text-transform: lowercase !important;
-  letter-spacing: -0.005rem;
-  font-weight: 700;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  color: #657b83;
-  color: #555;
-  font-family: 'Inconsolata', monospace;;
+  color: #6c71c4;
   font-size: 3em;
+}
+section.header .name #mirango {
+  color: #268bd2;
 }
 section.header h3.self-intro {
   font-size: 1em;
@@ -271,8 +265,11 @@ section.header nav ul a:first-child {
 section.header nav ul a:last-child {
   margin-right: 0;
 }
+section.header nav ul li::before {
+  content: ">  ";
+}
 section.header nav ul li {
-  color: #555;
+  color: #b58900;
   font-weight: 500;
   -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
   -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
@@ -280,7 +277,7 @@ section.header nav ul li {
   -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
 }
 section.header nav ul li:hover {
-  color: #111;
+  color: #268bd2;
 }
 @media (min-width: 600px) {
   section.header {
@@ -553,10 +550,20 @@ section.main .container .content .post-item {
   justify-content: space-between;
   font-size: 20px;
 }
+section.main .container .content .post-item a {
+  -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+  -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
+}
+section.main .container .content .post-item a:hover {
+  color: #268bd2;
+}
 section.main .container .content .post-item .title {
   color: #6c71c4;
 }
 section.main .container .content .post-item .date {
+  display: none;
   font-size: 16px;
   color: #b58900;
 }
@@ -606,6 +613,11 @@ section.main {
   section.main .container .content .post-item {
     display: flex;
     list-style: none;
+  }
+  section.main .container .content .post-item .date {
+    display: flex;
+    font-size: 16px;
+    color: #b58900;
   }
   section.main .container .content .post-item .meta {
     display: block;
